@@ -1,8 +1,11 @@
+@import "./mixins";
+
 * {
   font-family: "Josefin Sans", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
+  outline-color: #d61d4e;
 }
 
 ::before,
@@ -16,16 +19,157 @@ body {
 }
 
 body {
+  background: #111111;
+  color: #c4c4c4;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 a:active,
 a:hover {
   outline-width: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.body__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ui--developer--title {
+  font-weight: bold;
+  font-size: 75px;
+  line-height: 35px;
+  /* or 28% */
+
+  text-align: center;
+  letter-spacing: -0.177928px;
+
+  color: rgba(85, 85, 85, 0.2);
+  transform: rotate(-90deg);
+
+  position: fixed;
+  left: -4em;
+  top: 4em;
+
+  @include for-phone-only {
+    font-size: 50px;
+  }
+}
+
+.nav--lists {
+  display: flex;
+  align-items: center;
+  margin-top: 3em;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  & li:nth-child(1) {
+    margin-right: 2em;
+  }
+
+  & a {
+    color: #ffffff;
+    padding: 0 10px;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  /* for edge cases: */
+  width: 100%;
+  max-width: 100%;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  // height: 100%;
+  @include for-desktop-up {
+    width: 1170px;
+  }
+}
+
+.footer__container {
+  background: url("~src/images/footer.svg") no-repeat center bottom / contain;
+  width: 100%;
+  height: 500px;
+  // border-radius: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+  & .zag--one {
+    position: absolute;
+    right: 17em;
+    width: 254px;
+
+    @include for-phone-only {
+      right: 6em;
+      margin-top: 6em;
+    }
+  }
+
+  & .zag--two {
+    position: absolute;
+    left: 20em;
+    margin-top: -8em;
+    width: 188px;
+
+    @include for-phone-only {
+      left: 10em;
+    }
+  }
+}
+
+.footer--social__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 287px;
+
+  & img {
+    width: 40px;
+    border-radius: 50%;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 6.06101px 17.5769px #000000;
+    }
+  }
+}
+
+.footer--credits {
+  display: block;
+
+  & p {
+    font-weight: normal;
+    font-size: 20px;
+
+    text-align: center;
+
+    color: #555555;
+    position: relative;
+    top: 8em;
+
+    & strong {
+      color: #ffffff;
+    }
+  }
 }

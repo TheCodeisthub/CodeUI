@@ -1,0 +1,94 @@
+.header--container {
+  height: 100vh;
+}
+
+.header--text__container {
+  padding: 4em;
+  margin-top: 5em;
+
+  @include for-phone-only {
+    z-index: 2;
+    position: relative;
+    right: 2em;
+  }
+
+  & h4 {
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: -0.177928px;
+    color: #c4c4c4;
+  }
+
+  & h2 {
+    font-weight: bold;
+    font-size: 36px;
+
+    letter-spacing: -0.177928px;
+
+    color: #f1f1f1;
+  }
+
+  & h3 {
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: -0.177928px;
+
+    color: #c4c4c4;
+  }
+}
+
+.left--header--bg {
+  width: 495px;
+  height: 800px;
+
+  background: #d61d4e;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include for-phone-only {
+    width: 73px;
+
+    & svg {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+.yello--bg--cliper {
+  width: 449px;
+  height: 409px;
+
+  /* Yellow Color */
+
+  background: #f8c615;
+  border: 10px solid #111111;
+  box-sizing: border-box;
+  border-radius: 44.266px;
+  transform: rotate(20.17deg);
+
+  position: relative;
+  top: 10em;
+  right: 15em;
+
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+.top--dots {
+  position: absolute;
+  right: 0;
+  top: 4em;
+
+  @include for-phone-only {
+    right: 0;
+  }
+}
+
+.bottom--dots {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

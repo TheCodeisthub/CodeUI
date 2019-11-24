@@ -1,0 +1,92 @@
+.portfolio--container {
+  background: linear-gradient(
+      0deg,
+      rgba(214, 29, 78, 0.9),
+      rgba(214, 29, 78, 0.9)
+    ),
+    url("~src/images/portfolio_bg.png") no-repeat center bottom / cover;
+  height: 700px;
+  padding: 2em;
+  margin-bottom: 50vh;
+}
+
+.portfolio--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include for-phone-only {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.portfolio--text__container {
+  & h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 35px;
+    color: #ffffff;
+  }
+  & p {
+    width: 523px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150.6%;
+    color: #ffffff;
+
+    @include for-phone-only {
+      width: 100%;
+    }
+  }
+}
+
+.portfolio--card__container {
+  background: #f1f1f1;
+  border-radius: 15.1526px;
+  width: 650px;
+  margin: auto;
+
+  @include for-phone-only {
+    width: 100%;
+    position: relative;
+    top: 3em;
+  }
+
+  .portfolio--card--img__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    cursor: pointer;
+
+    @include for-phone-only {
+      padding: 1em;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
+  .portfolio--card--text {
+    background: #d61d4e;
+    border-radius: 0px 0px 10px 10px;
+    padding: 2em;
+
+    @include for-phone-only {
+      padding: 1em;
+    }
+
+    color: #f1f1f1;
+
+    & p {
+      font-weight: normal;
+      font-size: 18px;
+    }
+
+    & h2 {
+      font-size: 24px;
+    }
+  }
+}

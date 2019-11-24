@@ -10,7 +10,16 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "../sass/layout.scss"
+import "src/sass/layout.scss"
+import topzigzag from "src/images/topzigzag.svg"
+import bottomzigzag from "src/images/bottomzag.svg"
+
+// Social Icons
+import twitter from "src/images/twitter.svg"
+import instagram from "src/images/instagram.svg"
+import linkedin from "src/images/linkedin.svg"
+import github from "src/images/github.svg"
+import dribble from "src/images/dribble.svg"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,19 +35,28 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <div className="body__container">
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div className="footer__container">
+            <img className="zag--one" src={topzigzag} />
+            <img className="zag--two" src={bottomzigzag} />
+            <h2>STAY UPDATED</h2>
+            <div className="footer--social__container">
+              <img src={twitter} alt="" />
+              <img src={instagram} alt="" />
+              <img src={linkedin} alt="" />
+              <img src={dribble} alt="" />
+              <img src={github} alt="" />
+            </div>
+            <div className="footer--credits">
+              <p>
+                © {new Date().getFullYear()}, Built with {""}
+                <a href="https://www.gatsbyjs.org">Gatsby</a> | Developed by{" "}
+                <strong>Roosevelt</strong>
+              </p>
+            </div>
+          </div>
         </footer>
       </div>
     </>
