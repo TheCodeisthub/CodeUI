@@ -168,6 +168,11 @@ ul li {
     position: relative;
     top: 8em;
 
+    @include for-phone-only {
+      font-size: 16px;
+      line-height: 2;
+    }
+
     & strong {
       color: #ffffff;
     }

@@ -224,6 +224,10 @@
     line-height: 35px;
     color: #f1f1f1;
     text-align: center;
+
+    @include for-phone-only {
+      text-align: left;
+    }
   }
 
   & .line {
@@ -232,5 +236,9 @@
     position: relative;
     left: 23vw;
     bottom: 2em;
+
+    @include for-phone-only {
+      left: 0;
+    }
   }
 }

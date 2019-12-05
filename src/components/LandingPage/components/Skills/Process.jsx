@@ -9,9 +9,10 @@ export default function Process() {
         <p>
           I apply the double diamond technique to all my UX design sprints. I
           believe that research and testing are key in delivering a successful
-          project for the user. From quick, hand drawn sketches to MVP
-          prototypes, my process involves developing the best solution to
-          identified pain points through an iterative approach.
+          project for the user. <br />
+          <br /> From quick, hand drawn sketches to MVP prototypes, my process
+          involves developing the best solution to identified pain points
+          through an iterative approach.
         </p>
       </div>
 

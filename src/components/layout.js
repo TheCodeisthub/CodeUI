@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
           <div className="footer__container">
             <img className="zag--one" src={topzigzag} />
             <img className="zag--two" src={bottomzigzag} />
-            <h2>STAY UPDATED</h2>
+            <h2>KEEP IN TOUCH</h2>
             <div className="footer--social__container">
               <img src={twitter} alt="" />
               <img src={instagram} alt="" />

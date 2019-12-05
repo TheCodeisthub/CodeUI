@@ -140,6 +140,11 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  & p {
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
 }
 
 /* Hide the browser's default radio button */

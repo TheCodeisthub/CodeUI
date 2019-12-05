@@ -27,18 +27,7 @@ const IndexPage = () => (
 
     <Skills />
     <Portfolio />
-    <div className="hire--me--cta">
-      <div className="container">
-        <h2>Why Hire me?</h2>
-        <p>
-          Due to my interest in design, I am quick at learning and applying new
-          information. Below are the three main areas that my key strengths lie
-          in, as well as software skills. For a full breakdown, please refer to
-          my LinkedIn or get in touch to view my CV.
-        </p>
-        <button className="btn btn--yellow">Hire me</button>
-      </div>
-    </div>
+
     <Cta />
   </Layout>
 )

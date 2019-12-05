@@ -10,9 +10,11 @@ export default class Form extends Component {
           <textarea name="" id="" placeholder="Message me" required></textarea>
           <h4>GDPR AGREEMENT</h4>
           <label className="radio--btn--container">
-            I conscent to having TheCodeisthub store my information and contact
-            me with it.
-            <input type="radio" name="radio" required/>
+            <p>
+              I conscent to having TheCodeisthub store my information and
+              contact me with it.
+            </p>
+            <input type="radio" name="radio" required />
             <span className="checkmark"></span>
           </label>
 
